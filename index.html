@@ -18,38 +18,38 @@
                 <img class="navbar-logo" src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
             </a>
             <ul class="navbar-menu">
-                <li class="navbar-item">
-                    <a href="./pages/shop.html">SHOP</a>
-                    <ul>
-                        <li><a href="">Funkos</a></li>
-                        <li><a href="">Remeras</a></li>
-                        <li><a href="">Llaveros</a></li>
-                    </ul>
+                <li class="navbar-item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="">Funkos</a></li>
+                        <li class="submenu-item"><a href="">Remeras</a></li>
+                        <li class="submenu-item"><a href="">Llaveros</a></li>
+                    </ul>   
                 </li>
                 <li class="navbar-item">
-                    <a href="./pages/contact.html">CONTACTO</a>
+                    <a class="navbar__link href="./pages/contact.html">CONTACTO</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="./pages/login.html">LOGIN</a>
+                    <a class="navbar__link href="./pages/login.html">LOGIN</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="./pages/cart.html">
+                    <a class="navbar__link href="./pages/cart.html">
                         <img src="./img/icons/cart-icon.svg" alt="Icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
+    <section class="hero">
+        <article class="hero-content container">
+            <h3 class="hero-content__title">Nuevos Ingresos</h3>
+            <p class="hero-content__text">Descubrí el próximo Funko Pop de tu colección</p>
+            <button class="hero-content__link">
+                <a href="./pages/shop">SHOP</a>
+            </button>
+        </article>
+    </section>
     <main>
-        <section class="main-banner">
-            <article class="main-banner-content container">
-                <h3 class="main-banner-content__title">Nuevos Ingresos</h3>
-                <p class="main-banner-content__text">Descubrí el próximo Funko Pop de tu colección</p>
-                <button class="main-banner-content__link">
-                    <a href="./pages/shop">SHOP</a>
-                </button>
-            </article>
-        </section>
         <section class="collection container">
             <article class="collection-content">
                 <h3 class="collection-content__title">STAR WARS & THE MANDALORIAN</h3>
@@ -155,5 +155,6 @@
         </section>
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>

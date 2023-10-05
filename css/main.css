@@ -42,6 +42,7 @@
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
     --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
@@ -52,6 +53,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%; 
+    color: var(--dark-solid);
+}
+
+#prev {
+    font-size: 100%;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 a{
@@ -76,6 +92,9 @@ header{
     padding: var(--spacing-36);
 }
 
+
+/* NAVBAR */
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -92,15 +111,38 @@ header{
     gap: var(--spacing-20);
 }
 
-.navbar-item a{
+.with-submenu:hover .submenu{
+    display: block;
+}
+
+.submenu{
+    display: none;
+    width: 300px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu-item{
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.submenu-item:hover{
+    background-color: var(--primary-900);
+}
+
+.navbar__link{
     font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
     display: inline-block;
     transition: background .3s ease-in-out;
+    position: relative;
 }
 
-.navbar-item a:hover{
-    background-color: var(--primary-500);
+.navbar__link:hover{
+    background-color: var(--primary-900);
 }
 
 .container{
@@ -108,34 +150,51 @@ header{
     margin: 0 auto;
 }
 
-.main-banner{
-    height: 388px;
+.with-icon{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+
+/* HERO */
+
+.hero{
     background-image: url(../img/funkos-banner.webp);
     background-size: cover;
-    background-size: 100%;
+    background-attachment: fixed;
+    padding: var(--spacing-128);
 }
 
-.main-banner-content{
-    max-width: 1200px;
-    color: #FFFFFF;
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    align-items: start;
 }
 
-.main-banner .main-banner-content .main-banner-content__title{
-    font-size: 38px;
+.hero-content__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    color: var(--light-font-solid);
 }
 
-.main-banner .main-banner-content .main-banner-content__text{
-    font-size: 18px;
+.hero-content__text{
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    color: var(--light-font-solid);
 }
 
-.main-banner .main-banner-content .main-banner-content__link{
-    width: 211px;
-    height: 47px;
+.hero-content__link{
     display: inline-block;
+    font-size: var(--font-medium);
+    background-color: var(--light-bg-solid);
+    padding: var(--spacing-12) var(--spacing-68);
     border-radius: 50px;
+    font-weight: 500;
 }
 
-.main-banner .main-banner-text .main-banner-content__linkn a{
+.hero-content__link a{
     font-size: 20px;
 }
 
@@ -175,3 +234,4 @@ header{
     color: #FFFFFF;
     border-radius: 50px;
 }
+
